@@ -18,9 +18,24 @@ const MovieResponse = async()=>{
     }
     
     
-    return <p className='data'>
-        {data[0].title}
-    </p>
+    return (
+        data.map(({title,poster_path,overview})=>{
+        return(
+            <>
+                <div>
+                    <p>{title}</p>
+                    <a href='https://image.tmdb.org/t/p/w300/${poster_path}'/>
+                    <img src={`https://image.tmdb.org/t/p/w300/${poster_path}`}
+                />
+                    <p>{overview}</p>
+                </div>
+            </>
+            )
+        }
+    
+        
+    
+    ))
 }
 
 
