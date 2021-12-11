@@ -1,12 +1,14 @@
-
+import api from "./Components/API";
+import MovieCard from "./Components/MovieCard/";
 function App() {
+  // MovieCard()
+  console.log(api)
+
   return (
     <div className="App">
       <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+       <MovieCard/> 
+       
         
       </header>
     </div>
